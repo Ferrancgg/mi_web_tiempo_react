@@ -1,0 +1,45 @@
+.fg-central-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap:1rem;
+    padding: 3rem;
+    border-radius: 15px;
+    /* background-color: rgba(106, 75, 48, 0.524); */
+    text-align: center;
+    background-color:rgba(106, 75, 48, 0.524);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.5); 
+    border: 2px solid white;
+}
+.fg-central-container p {
+    /* background-color:rgba(106, 75, 48, 0.524) ; */
+    color: aliceblue;
+    font-weight: 500;
+}
+.fg-temperatura-container-home{
+    display: flex;
+    /* border: 2px solid black; */
+    gap: 2rem;
+}
+.fg-inferior-container{
+    display: flex;
+    gap:3rem;
+}
+
+  /* movil */
+
+  @media screen and ( max-width:640px){
+
+    .fg-central-container{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: 400px;
+        padding: 1rem;
+       
+
+     }
+
+  

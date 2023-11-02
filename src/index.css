@@ -1,0 +1,66 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+header{
+    background-color: #658864;
+    min-height: 5svh;
+}
+main{
+    min-height: 80svh;
+    background-color: var(--primary-200);
+}
+footer{
+    min-height: 7svh;
+    background-color: #658864;
+}
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    color: var(--text-100);
+    font-family: 'Montserrat', sans-serif;
+    /* background-color: var(--bg-100); */
+    background-color:transparent;
+  
+    
+  }
+
+
+#root {
+
+  
+    --primary-100:#658864;
+    --primary-200:#B7B78A;
+    --primary-300:#fdf6fd;
+    --accent-100:#bc6c25;
+    --accent-200:#ecd79b;
+    --text-100:#292524;
+    --text-200:#78716c;
+    --bg-100:#DDDDDD;
+    --bg-200:#EEEEEE;
+    --bg-300:#d1d1d1;
+      
+      
+  
+  }
+
+
+  /* tablet */
+
+  @media screen and(min-width:640px) and ( max-width:1280px){
+* {background-color:rgb(84, 84, 235) ;}
+
+  }
+
+
+
+  /* movil */
+
+  @media screen and ( max-width:640px){
+  
+
+  }

@@ -1,0 +1,99 @@
+
+.fg-home{
+    background-color: rgb(22, 103, 103);
+    min-height: 89svh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap:2rem;
+    padding-left: 5rem;
+    padding-right: 5rem;
+/* 
+    background: url("https://res.cloudinary.com/di49fnkc8/image/upload/v1696310519/beach-sea-coast-water-nature-ocean-725479-pxhere.com_jnhnfl.jpg") center/cover; */
+    background-image: linear-gradient(
+        to bottom,
+        rgba(231, 171, 118, 0.047), /* Color de inicio del degradado */
+        rgba(24, 22, 22, 0.472) /* Color de final del degradado */
+      ), url("https://res.cloudinary.com/di49fnkc8/image/upload/v1696310519/beach-sea-coast-water-nature-ocean-725479-pxhere.com_jnhnfl.jpg"); 
+      background-size: cover;
+      background-repeat: no-repeat;
+
+
+
+}
+.fg-principal-container1>h1{
+    color: aliceblue;
+
+}
+.fg-principal-container1>h3{
+    color:aliceblue
+}
+
+.fg-img-weather{
+    width: 300px;
+    height: 300px;
+    object-fit: cover;
+    /* border: 4px solid black; */
+
+}
+.fg-img-weather>img{
+ height: 100%;
+ width: 100%;
+}
+.fg-principal-container1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    /* border: 3px solid green; */
+    background-color:rgba(106, 75, 48, 0.524);
+    box-shadow: 0 0 80px rgba(0, 0, 0, 0.5); 
+    border: 2px solid white;
+    
+    width: 50%;
+    padding-top: 2rem;
+    padding-bottom: 2rem;
+    border-radius: 15px;
+    height: 500px;
+    gap:2rem;
+   
+  
+    
+
+
+}
+
+@media screen and ( max-width:640px){
+
+
+    .fg-home{
+        flex-direction: column;
+        padding-top: 10px;
+        padding-bottom: 10px;
+        gap:10px;
+    }
+
+    .fg-principal-container1{
+     
+        /* border: 3px solid green; */
+        background-color:rgba(106, 75, 48, 0.524);
+        box-shadow: 0 0 80px rgba(0, 0, 0, 0.5); 
+        border: 2px solid white;
+        width: 400px;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        border-radius: 15px;
+        height: 300px;
+        gap:1rem;
+    
+    }
+    .fg-img-weather{
+        width: 150px;
+        height: 150px;
+    
+    }
+
+
+    }
+
+  
