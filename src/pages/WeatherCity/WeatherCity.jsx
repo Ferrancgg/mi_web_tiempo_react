@@ -6,13 +6,12 @@ import "./WeatherCity.css";
 import PaginaCarga from "../../components/PaginaCarga/PaginaCarga";
 
 const WeatherCity = () => {
-  const { lat, lon, loading } = useGeolocation();
+  const { lat, lon } = useGeolocation();
   const [data, setData] = useState(null);
   const [load, setLoad] = useState(true);
 
   useEffect(() => {
     if (lat !== null && lon !== null) {
-      // Realizamos la solicitud usando then
       setLoad(true);
       fetch(
         `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${APIkeyWeather}&units=metric`
@@ -37,9 +36,7 @@ const WeatherCity = () => {
 
   return (
     <div>
-    
-
-      {load && <PaginaCarga/>}
+      {load && <PaginaCarga />}
       {data !== null && (
         <div className="fg-prevision-main">
           <h2>La previsión para los próximos días en:</h2>
@@ -47,51 +44,18 @@ const WeatherCity = () => {
           {console.log(data)}
           {console.log(data.list[0].weather[0].main)}
           {data && (
-  <div className="fg-prevision-container">
-    {[0, 8, 16, 24, 32].map((index) => (
-      <Prevision_card
-        key={index}
-        fecha={data.list[index].dt_txt.slice(0, 10)}
-        temperatura={data.list[index].main.temp}
-        sensacion={data.list[index].main.feels_like}
-        icono={data.list[index].weather[0].main}
-      />
-    ))}
-  </div>
-)}
-
-          {/* <div className="fg-prevision-container">
-            <Prevision_card
-              fecha={data.list[0].dt_txt.slice(0, 10)}
-              temperatura={data.list[0].main.temp}
-              sensacion={data.list[0].main.feels_like}
-              icono={data.list[0].weather[0].main}
-            />
-            <Prevision_card
-              fecha={data.list[8].dt_txt.slice(0, 10)}
-              temperatura={data.list[8].main.temp}
-              sensacion={data.list[8].main.feels_like}
-              icono={data.list[8].weather[0].main}
-            />
-            <Prevision_card
-              fecha={data.list[16].dt_txt.slice(0, 10)}
-              temperatura={data.list[16].main.temp}
-              sensacion={data.list[16].main.feels_like}
-              icono={data.list[16].weather[0].main}
-            />
-            <Prevision_card
-              fecha={data.list[24].dt_txt.slice(0, 10)}
-              temperatura={data.list[24].main.temp}
-              sensacion={data.list[24].main.feels_like}
-              icono={data.list[24].weather[0].main}
-            />
-            <Prevision_card
-              fecha={data.list[32].dt_txt.slice(0, 10)}
-              temperatura={data.list[32].main.temp}
-              sensacion={data.list[32].main.feels_like}
-              icono={data.list[32].weather[0].main}
-            />
-          </div> */}
+            <div className="fg-prevision-container">
+              {[0, 8, 16, 24, 32].map((index) => (
+                <Prevision_card
+                  key={index}
+                  fecha={data.list[index].dt_txt.slice(0, 10)}
+                  temperatura={data.list[index].main.temp}
+                  sensacion={data.list[index].main.feels_like}
+                  icono={data.list[index].weather[0].main}
+                />
+              ))}
+            </div>
+          )}
         </div>
       )}
     </div>
