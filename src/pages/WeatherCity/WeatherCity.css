@@ -27,6 +27,25 @@ h2 {
   gap: 2rem;
   align-items: center;
   justify-content: center;
+
+}
+
+
+@media screen and (min-width:640px) and (max-width:1280px) {
+  .fg-prevision-container{
+  
+    flex-wrap: wrap;
+  }
+  .fg-prevision-main{
+    gap:5px
+  }
+  .fg-prevision-main>h2{
+    font-size: 15px;
+  }
+  .fg-prevision-main>h1{
+    font-size: 20px;
+  }
+
 }
 @media screen and (max-width: 640px) {
   .fg-prevision-container {

@@ -4,10 +4,10 @@
 
 header{
     background-color: #658864;
-    min-height: 5svh;
+    min-height: 7svh;
 }
 main{
-    min-height: 80svh;
+    min-height: 85svh;
     background-color: var(--primary-200);
 }
 footer{
@@ -61,6 +61,9 @@ footer{
   /* movil */
 
   @media screen and ( max-width:640px){
+    main{
+      height:85svh;;
+    }
   
 
   }

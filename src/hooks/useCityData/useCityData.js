@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
+
 import { APIkeyWeather } from "../../data/apiKey";
-
-
 
 const useCityData = () => {
   const [city, setCity] = useState("");
@@ -48,6 +47,7 @@ const useCityData = () => {
           responseData[0].capitalInfo.latlng[0],
           responseData[0].capitalInfo.latlng[1]
         );
+        
       })
       .catch((error) => {
         setError(`Error al buscar la capital: ${error.message}`);

@@ -16,3 +16,10 @@ nav{
 .nav-link:hover{
     background-color: var(--primary-300);
 }
+
+
+@media screen and (max-width: 640px) {
+
+
+    nav{gap:20px}
+}

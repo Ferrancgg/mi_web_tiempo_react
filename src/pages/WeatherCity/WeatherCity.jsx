@@ -46,8 +46,21 @@ const WeatherCity = () => {
           <h1>{data.city.name}</h1>
           {console.log(data)}
           {console.log(data.list[0].weather[0].main)}
+          {data && (
+  <div className="fg-prevision-container">
+    {[0, 8, 16, 24, 32].map((index) => (
+      <Prevision_card
+        key={index}
+        fecha={data.list[index].dt_txt.slice(0, 10)}
+        temperatura={data.list[index].main.temp}
+        sensacion={data.list[index].main.feels_like}
+        icono={data.list[index].weather[0].main}
+      />
+    ))}
+  </div>
+)}
 
-          <div className="fg-prevision-container">
+          {/* <div className="fg-prevision-container">
             <Prevision_card
               fecha={data.list[0].dt_txt.slice(0, 10)}
               temperatura={data.list[0].main.temp}
@@ -78,7 +91,7 @@ const WeatherCity = () => {
               sensacion={data.list[32].main.feels_like}
               icono={data.list[32].weather[0].main}
             />
-          </div>
+          </div> */}
         </div>
       )}
     </div>
