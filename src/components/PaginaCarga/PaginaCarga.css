@@ -1,4 +1,5 @@
 #pagina-carga{
+    min-height: 87svh;
     display: flex;
     align-items: center;
     justify-content: center;
