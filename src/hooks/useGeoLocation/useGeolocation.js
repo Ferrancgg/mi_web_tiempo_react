@@ -10,11 +10,11 @@ const useGeolocation = () => {
         (position) => {
           setLat(position.coords.latitude);
           setLon(position.coords.longitude);
-          setIsLoading(false); // Cuando los datos se cargan, establece isLoading en false.
+          setIsLoading(false); 
         },
         (error) => {
           console.error('Error obteniendo la ubicación:', error);
-          setIsLoading(false); // En caso de error, también establece isLoading en false.
+          setIsLoading(false); 
         }
       );
     }, []);
