@@ -1,11 +1,16 @@
 header>nav{padding-top: 3px;
 }
-nav{
+header{
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 50px;
 }
+nav{
+   display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;}
+   
 .nav-link{
     border: 1px solid black;
     padding: 5px 20px;
