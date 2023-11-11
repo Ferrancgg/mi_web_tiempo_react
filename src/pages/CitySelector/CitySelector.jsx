@@ -8,7 +8,7 @@ const CitySelector = () => {
   const { city, data, loading, dataWeather, buscar } = useCityData();
 
   return (
-    <main>
+    <main className="main-selector">
       <section className="search-container">
         <div className="search">
           <input type="text" id="cityInput" placeholder="Escribe la capital" />
@@ -23,7 +23,7 @@ const CitySelector = () => {
         </div>
       </section>
 
-      <section>
+      <section className="result-container-selector">
         {loading && <PaginaCarga />}
         {data && console.log(data)}
         {dataWeather && console.log(dataWeather)}

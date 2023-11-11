@@ -46,7 +46,7 @@ const Home = () => {
   };
 
   return (
-    <div>
+    <main>
       {error && <p>{error}</p>}
       {data && (
         <>
@@ -68,7 +68,7 @@ const Home = () => {
         </>
       )}
       {lat === null && lon === null && <PaginaCarga />}
-    </div>
+    </main>
   );
 };
 
